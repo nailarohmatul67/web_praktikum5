@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>	
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IMAGE PICKER</title>
+        <style>
+            body{
+                background-color: #8ecf38;
+            }
+        </style>
+    </head>
+        <body style="margin: 200px"> 	<center>		
+            <h1> Image Picker </h1>
+            <H3>RUMAH ADAT</H3>
+            
+            <select onchange="gantigambar();" id="listgambar">
+                <option value="macam.jpg">BERMACAM-MACAM RUMAH ADAT</option>			
+                <option value="aceh.jpg">ACEH</option>			
+                <option value="betawi.jpg">BETAWI</option>			
+                <option value="jambi.jpg">JAMBI</option>			
+                <option value="lampung.jpg">LAMPUNG</option>			
+                <option value="papua.jpg">PAPUA</option>	
+                <option value="sumbar.jpg">SUMATERA BARAT</option>		
+            </select>	</center>		
+            <br/>
+            <img src="macam.jpg" style="width: 100%" id="gambar">	
+         </body>
+         <script type="text/javascript">	
+         function gantigambar()
+          {		
+              let gambar = document.getElementById("listgambar").value;		
+              document.getElementById("gambar").src = gambar;		
+              alert("Ini Gambar " + gambar);	  
+            }
+        </script>
+</html>

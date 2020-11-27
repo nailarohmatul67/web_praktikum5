@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Chat Message </title>
+        <style type="text/css">
+            body{
+                background-color: #747a2e;
+                background-repeat: no-repeat;
+            }
+            h2{
+	            font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	            font-size: 30px;
+	            color: #000000;
+	            font-weight: bold;
+                padding-top: 10px ;
+            }
+        </style>
+    </head>
+    <body>
+    <center>
+        <div >
+            <h2 style="background-color:rgb(61, 8, 8); color: rgb(249, 250, 252);">Chat Message</h2>
+          </div>	
+        <div 
+        style="width: 100%; stroke: black; color:rgb(235, 235, 247);" id="isichat">			
+        </div>
+        <form method="REQUEST" onsubmit="return kirim();">		
+            <input id="pesan" style="width: 50%" type="text" name="pesan">		
+            <button type="submit" onclick="return kirim();">SEND</button>	
+        </form>	
+    </body>
+    <script type="text/javascript">	function kirim() {		
+        let pesan = document.getElementById("pesan").value;		
+        document.getElementById("isichat").innerHTML += pesan+"<br/>";		
+        document.getElementById("pesan").value = "";		
+        return false;	
+        }
+    </script>
+</html> 
